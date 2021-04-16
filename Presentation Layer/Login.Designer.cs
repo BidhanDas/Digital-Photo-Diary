@@ -52,6 +52,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Log In";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // loginButton
             // 
@@ -61,6 +62,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Log In";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click_1);
             // 
             // passwordTextBox
             // 
@@ -85,6 +87,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(176, 30);
             this.usernameTextBox.TabIndex = 1;
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // label1
             // 
@@ -102,7 +105,10 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
