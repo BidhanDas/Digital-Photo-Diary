@@ -34,16 +34,15 @@ namespace Digital_Photo_Diary.Presentation_Layer
             }
             else if (result == 2)
             {
-                Form2 manageProduct = new Form2();
+                User2 u2 = new User2();
                 this.Hide();
-                manageProduct.Show();
-                ;
+                u2.Show();
             }
             else if (result == 3)
             {
-                Form3 manageCategory = new Form3();
+                User3 u3 = new User3();
                 this.Hide();
-                manageCategory.Show();
+                u3.Show();
             }
             else
             {

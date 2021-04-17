@@ -62,6 +62,18 @@
     <Compile Include="Presentation Layer\User1.Designer.cs">
       <DependentUpon>User1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\User2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\User2.Designer.cs">
+      <DependentUpon>User2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\User3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\User3.Designer.cs">
+      <DependentUpon>User3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation Layer\Login.resx">
@@ -69,6 +81,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\User1.resx">
       <DependentUpon>User1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\User2.resx">
+      <DependentUpon>User2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\User3.resx">
+      <DependentUpon>User3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
