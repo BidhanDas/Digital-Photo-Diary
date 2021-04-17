@@ -35,6 +35,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.label2 = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.groupBox1.Controls.Add(this.usernameTextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(170, 77);
+            this.groupBox1.Location = new System.Drawing.Point(180, 124);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(464, 314);
             this.groupBox1.TabIndex = 1;
@@ -98,11 +99,23 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.label1.TabIndex = 0;
             this.label1.Text = "User Name";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(210, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(391, 46);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Digital Photo Album";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -112,6 +125,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +137,6 @@ namespace Digital_Photo_Diary.Presentation_Layer
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
