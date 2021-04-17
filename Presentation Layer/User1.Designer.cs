@@ -158,7 +158,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             // textOpenButton
             // 
             this.textOpenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textOpenButton.Location = new System.Drawing.Point(665, 258);
+            this.textOpenButton.Location = new System.Drawing.Point(665, 262);
             this.textOpenButton.Name = "textOpenButton";
             this.textOpenButton.Size = new System.Drawing.Size(123, 33);
             this.textOpenButton.TabIndex = 11;
@@ -180,7 +180,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(665, 333);
+            this.deleteButton.Location = new System.Drawing.Point(665, 345);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(123, 33);
             this.deleteButton.TabIndex = 13;

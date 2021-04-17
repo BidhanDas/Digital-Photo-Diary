@@ -34,7 +34,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.textOpenButton = new System.Windows.Forms.Button();
             this.photoOpenButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
             this.saveButton = new System.Windows.Forms.Button();
             this.browseButtonAlbum = new System.Windows.Forms.Button();
             this.browseButtonPhoto = new System.Windows.Forms.Button();
@@ -42,7 +42,8 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.deleteButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
             // backButton
@@ -65,16 +66,18 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.refreshButton.TabIndex = 25;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // textOpenButton
             // 
             this.textOpenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textOpenButton.Location = new System.Drawing.Point(665, 257);
+            this.textOpenButton.Location = new System.Drawing.Point(665, 262);
             this.textOpenButton.Name = "textOpenButton";
             this.textOpenButton.Size = new System.Drawing.Size(123, 33);
             this.textOpenButton.TabIndex = 24;
             this.textOpenButton.Text = "Open Text";
             this.textOpenButton.UseVisualStyleBackColor = true;
+            this.textOpenButton.Click += new System.EventHandler(this.textOpenButton_Click);
             // 
             // photoOpenButton
             // 
@@ -85,6 +88,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.photoOpenButton.TabIndex = 23;
             this.photoOpenButton.Text = "Open Photo";
             this.photoOpenButton.UseVisualStyleBackColor = true;
+            this.photoOpenButton.Click += new System.EventHandler(this.photoOpenButton_Click);
             // 
             // label3
             // 
@@ -95,15 +99,15 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.label3.TabIndex = 22;
             this.label3.Text = "Select from the Album";
             // 
-            // dataGridView1
+            // dgv1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 182);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(624, 199);
-            this.dataGridView1.TabIndex = 21;
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(16, 182);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.RowHeadersWidth = 62;
+            this.dgv1.RowTemplate.Height = 28;
+            this.dgv1.Size = new System.Drawing.Size(624, 199);
+            this.dgv1.TabIndex = 21;
             // 
             // saveButton
             // 
@@ -114,6 +118,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.saveButton.TabIndex = 20;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // browseButtonAlbum
             // 
@@ -124,6 +129,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.browseButtonAlbum.TabIndex = 19;
             this.browseButtonAlbum.Text = "Browse";
             this.browseButtonAlbum.UseVisualStyleBackColor = true;
+            this.browseButtonAlbum.Click += new System.EventHandler(this.browseButtonAlbum_Click);
             // 
             // browseButtonPhoto
             // 
@@ -134,6 +140,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.browseButtonPhoto.TabIndex = 18;
             this.browseButtonPhoto.Text = "Browse";
             this.browseButtonPhoto.UseVisualStyleBackColor = true;
+            this.browseButtonPhoto.Click += new System.EventHandler(this.browseButtonPhoto_Click);
             // 
             // textBox2
             // 
@@ -169,16 +176,28 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.label1.TabIndex = 14;
             this.label1.Text = "Browse Photo for the Album";
             // 
+            // deleteButton
+            // 
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Location = new System.Drawing.Point(665, 348);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(123, 33);
+            this.deleteButton.TabIndex = 26;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
             // User2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.textOpenButton);
             this.Controls.Add(this.photoOpenButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.browseButtonAlbum);
             this.Controls.Add(this.browseButtonPhoto);
@@ -191,7 +210,8 @@ namespace Digital_Photo_Diary.Presentation_Layer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.User2_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.User2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,7 +224,7 @@ namespace Digital_Photo_Diary.Presentation_Layer
         private System.Windows.Forms.Button textOpenButton;
         private System.Windows.Forms.Button photoOpenButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button browseButtonAlbum;
         private System.Windows.Forms.Button browseButtonPhoto;
@@ -212,5 +232,6 @@ namespace Digital_Photo_Diary.Presentation_Layer
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button deleteButton;
     }
 }
